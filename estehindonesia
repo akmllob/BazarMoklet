@@ -1,0 +1,93 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package bazarmoklet;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author AkmaL
+ */
+public class BazarMoklet {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        String nama, makanan, minuman;
+        int harga1 = 0,harga2 = 0,uang, total=0, kembalian =0, pajak=1000;
+        
+        System.out.println("SELAMAT DATANG DI BAZAR MOKLET SELAMAT BERBELANJA");
+        System.out.println("list makanan yang tersedia");
+        System.out.println("- Fluffy Pancake");
+        System.out.println("- Lumpur surga");
+        System.out.println("- pie brownies");
+        System.out.println("- baby crab");
+        System.out.println("- kembang gula kapas");
+        System.out.println("silahkan pilih menu makanan diatas = ");
+        makanan=input.nextLine();
+        
+        switch (makanan) {
+            case "fluffy pancake":
+                harga1 = 15000;
+                break;
+            case "lumpur surga":
+                harga1 = 2500;
+                break;
+            case "pie brownies":
+                harga1 = 70000;
+                break;
+            case "baby crab":
+                harga1 = 15000;
+                break;
+            case "kembang gula kapas":
+                harga1 = 20000;
+                break;
+        }
+        
+        System.out.println("List minuman ES TEH INDONESIA ");
+        System.out.println("- taro chizu");
+        System.out.println("- ovaltime");
+        System.out.println("- brown sugar");
+        System.out.println("- es teh original");
+        System.out.println("- es teh melati");
+        System.out.println("Silahkan pilih menu minuman diatas = ");
+        minuman=input.nextLine();
+        
+        switch (minuman){
+            case "taro chizu":
+                harga2 = 17000;
+                break;
+            case "ovaltime":
+                harga2 = 16000;
+                break;
+            case "brown sugar":
+                harga2 = 18000;
+                break;
+            case "es teh original":
+                harga2 = 8500;
+                break;
+            case "es teh melati":
+                harga2 = 8500;
+        }
+        total=harga1+harga2;
+        System.out.println("Total belanjaan anda = "+total);
+        
+        System.out.println("Masukkan uang anda= ");
+        uang=input.nextInt();
+        kembalian=uang-total;
+        
+        if (total<uang){
+            System.out.println("kembalian anda sebesar = "+kembalian+" Terima Kasih Mohon ditunggu pesanannya");
+        } else if (total>uang){
+            System.out.println("Maaf uang anda kurang, Terimakasih Selamat Datang Kembali");}
+        
+            
+            
+        }
+    }
+    
+
